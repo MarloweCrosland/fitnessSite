@@ -9,7 +9,7 @@
    >Login</h1>
   </div>
 </template>
-//TODO: REVEAL LOGIN INPUT FEILDS ON CLICK & fix git
+//TODO: REVEAL LOGIN INPUT FEILDS ON CLICK 
 <script>
 export default {
   data(){
