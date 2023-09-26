@@ -1,15 +1,20 @@
 <template>
-  <div class="hello">
-    <!-- TRANSFORM TEXT ON CLICK USING PADDING TOP TOGGLE -->
+  <div class="loginDiv">
+
    <h1 v-el:login class="login" 
    @click="handleLoginClick"
    :style="{
-     padding: active ? '200px' : '0px' 
+     padding: active ? '0px' : '200px',
      }"
    >Login</h1>
+
+   <!-- TODO: learn router
+
+   <router-link to="/login">Login</router-link>
+   <router-view></router-view> -->
   </div>
+
 </template>
-//TODO: REVEAL LOGIN INPUT FEILDS ON CLICK 
 <script>
 export default {
   data(){
@@ -21,6 +26,7 @@ export default {
     handleLoginClick(){
       this.active = !this.active
     },
+
   },
   name: 'HomePage',
   props: {

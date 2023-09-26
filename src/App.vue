@@ -1,5 +1,5 @@
 <template>
-  <Home msg="Welcome to Your Vue.js App"/>
+  <Home msg="Hi!"/>
   <Login/>
 </template>
 
