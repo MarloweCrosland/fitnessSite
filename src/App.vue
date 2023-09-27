@@ -1,19 +1,15 @@
 <template>
-  <Home msg="Hi!"/>
-  <Login/>
+  <div>
+  </div>
+  <router-view/>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import Login from './components/Login.vue';
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home,
-    Login,
-  }
-}
+  },
+};
 </script>
 
 <style>

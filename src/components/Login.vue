@@ -17,7 +17,9 @@ export default{
 </script>
 
 <style scoped>
+
     #login{
+        padding: 100px;
         text-align: center;
     }
 
