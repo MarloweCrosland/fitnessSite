@@ -1,19 +1,27 @@
 <template>
-  <router-link to="/login">
-    <div id="loginTextDiv">
-      <h1 v-el:login class="login" @click="handleLoginClick">Login</h1>
+  <div id="container-div" :style="cssProps">
+    <div id="heading-div">
+      <h3>Movement for sanity over vanity</h3>
+      <h2>Trainer Marlowe</h2>
+      <h2></h2>
     </div>
-  </router-link>
+    <router-link style="text-decoration: none" to="/begin">
+      <div id="beginTextDiv">
+        <h1 v-el:begin class="begin" @click="handleBeginClick">Begin</h1>
+      </div>
+    </router-link>
+  </div>
 </template>
 <script>
 export default {
   data() {
     return {
       active: false,
-    };
+      backgroundImage: `url(${require('../assets/sample-photo.jpg')})`
+    }
   },
   methods: {
-    handleLoginClick() {
+    handleBeginClick() {
       this.active = !this.active;
     },
   },
@@ -26,23 +34,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#loginTextDiv {
+#beginTextDiv {
   padding: 100px;
+}
+#container-div {
+  background-color: #000000;
+  background-size: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/src/assets/sample-photo.jpg")
 }
 
 h1 {
-  text-decoration: none;
-  margin: 40px 0 0;
+  margin: 20vh 0 0;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 3rem;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: -4px 4px #ef3550, -8px 8px #f48fb1, -12px 12px #7e57c2,
-    -16px 16px #2196f3, -20px 20px #26c6da, -24px 24px #43a047,
-    -28px 28px #eeff41;
+  text-shadow: -4px 4px #ef3550, -8px 8px #f48fb1;
   opacity: 0.6;
+  text-decoration: none !important;
 }
 
 h1:hover {
@@ -50,7 +63,28 @@ h1:hover {
   cursor: pointer;
 }
 
+#heading-div {
+  
+}
+
+h2 {
+  margin-top: 10%;
+  color: #fff;
+  font-size: 4vh;
+  text-align: center;
+  font-family: "KoHo", sans-serif;
+}
+
+h3 {
+  font-size: 3vh;
+  color: #f48fb1;
+  text-shadow: 1pt #fff;
+  text-align: center;
+  font-family: "KoHo", sans-serif;
+}
+
 body {
+  margin-top: 0;
   background-color: lightgrey;
 }
 </style>
