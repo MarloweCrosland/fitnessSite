@@ -34,13 +34,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
+html{
+  overflow: auto;
+}
+
 #beginTextDiv {
   padding: 100px;
 }
 #container-div {
   background-color: #000000;
   background-size: 100%;
-  height: 100vh;
+  height: 200vh;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/src/assets/sample-photo.jpg")
 }
@@ -63,9 +69,6 @@ h1:hover {
   cursor: pointer;
 }
 
-#heading-div {
-  
-}
 
 h2 {
   margin-top: 10%;
@@ -84,6 +87,7 @@ h3 {
 }
 
 body {
+  padding: 0;
   margin-top: 0;
   background-color: lightgrey;
 }
